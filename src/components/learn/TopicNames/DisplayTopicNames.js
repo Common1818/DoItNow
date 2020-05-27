@@ -75,13 +75,14 @@ const DisplayTopicNames = (props) => {
               <div
                 className="p-0 speciality-topic-container m-1"
                 key={item.id}
-                onClick={() => checkLocked(item)}
-              >
+                onClick={() => checkLocked(item)}>
+
                 {/* When user clicked on the locked topic box referral article shows*/}
                 <h4 className="float-left topicName">{item.Name}</h4>
 
                 <Accordion>
                   {item.locked != true || unhideToggleId[item.id] != null ? (
+
                     <Accordion.Toggle
                       as={Button}
                       variant="link"
@@ -91,8 +92,8 @@ const DisplayTopicNames = (props) => {
                         $(
                           `.fa-angle-down#${item.Name.split(/\s/).join("")}`
                         ).toggleClass("rotate");
-                      }}
-                    >
+                      }}>
+
                       <img
                         src="https://www.svgrepo.com/show/60060/down-arrow.svg"
                         className="article-dwn article-toggle fa-angle-down"
@@ -112,7 +113,7 @@ const DisplayTopicNames = (props) => {
 
                     <div className="float-right">
                       {isAdmin
-                        ? $(
+                        ? (
                             <DeleteButton
                               key={"del" + item.id}
                               collectionName="TopicNames"

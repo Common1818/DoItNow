@@ -1,9 +1,11 @@
 import React, { useContext, useState } from "react";
-import "./css/adminPanel.css";
 import { Button } from "react-bootstrap";
+import { Helmet } from "react-helmet";
+import { AuthContext } from "../../contexts/authContext";
 import MakeAdminForm from "./makeAdminForm";
 import UserTable from "./userTable";
-import { AuthContext } from "../../contexts/authContext";
+import "./css/adminPanel.css";
+
 
 const firebase = require("firebase");
 require("firebase/functions");
@@ -26,6 +28,11 @@ const AdminPanel = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Do It Now - admin</title>
+        <meta name="description" content="Do It Now is a free platform to learn webdevelopment for free lancing" />
+        <meta name="robots" content="noindex nofollow" />
+      </Helmet>
       {isAdmin ? (
         <div className="adminpanel-container">
           <div className="make-admin-form">

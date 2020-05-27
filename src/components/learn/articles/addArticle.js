@@ -59,8 +59,8 @@ const AddArticle = (props) => {
       <Col sm={1}></Col>
 
       <Col id="top" sm={10}>
-        <div className="">
-          <div className="">
+        <div>
+          <div>
             <h4 className="" id="">
               Add a Article
             </h4>
@@ -97,8 +97,7 @@ const AddArticle = (props) => {
                 <div className="add-article-button">
                   <button
                     className="btn btn-outline-primary m-3"
-                    onClick={handleAdd}
-                  >
+                    onClick={handleAdd}>
                     Add
                   </button>
                   {Loading && !complete ? (

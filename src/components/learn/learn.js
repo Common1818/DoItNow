@@ -21,6 +21,7 @@ const Learn = () => {
       initial={{ opacity: 0 }}
     >
     <Helmet>
+        <title>Do It Now</title>
         <meta name="description" content="Learn all the skills necessary for freelancing in webDevelopment" />
         <meta name="robots" content="index follow" />
       </Helmet>
@@ -33,7 +34,7 @@ const Learn = () => {
             <div className="clear-flex"></div>
             <div className="mb-3 ml-3 mr-3">
               <div className="text-center">
-                <NavLink to="/addcard">
+                <NavLink to="/addcard" rel="nofollow">
                   <Button>Add Card</Button>
                 </NavLink>
               </div>

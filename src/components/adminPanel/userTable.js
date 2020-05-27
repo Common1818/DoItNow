@@ -44,8 +44,8 @@ const UserTable = ({ users }) => {
                               );
                             });
                           }}
-                          variant="danger"
-                        >
+                          variant="danger">
+                          
                           Delete User
                         </Button>
                         <Button
@@ -59,8 +59,8 @@ const UserTable = ({ users }) => {
                               );
                             });
                           }}
-                          variant="success"
-                        >
+                          variant="success">
+
                           UnBlock User
                         </Button>
                         <Button
@@ -74,8 +74,8 @@ const UserTable = ({ users }) => {
                               );
                             });
                           }}
-                          variant="warning"
-                        >
+                          variant="warning">
+
                           Block User
                         </Button>
                       </div>

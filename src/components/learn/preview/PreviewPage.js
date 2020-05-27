@@ -77,12 +77,13 @@ const PreviewPage = (props) => {
   return (
     <div className="topics-ovr-cont">
       <Helmet>
+        <title>Do It Now</title>
         <meta
           name="description"
           content={
             "Learn these Web development topics free" + descriptionString
-          }
-        />
+          }/>
+
         <meta name="robots" content="index follow" />
       </Helmet>
       {TopicNames ? (
@@ -93,10 +94,9 @@ const PreviewPage = (props) => {
           </div>
           <Row>
             <Col className="topic-ovr-container" lg={4}>
-              {/* Yeh pehla accordian deekhta kyun nahi h desktop mode mein */}
               <Accordion
-                defaultActiveKey={window.innerWidth <= 500 ? "1" : "0"}
-              >
+                defaultActiveKey={window.innerWidth <= 500 ? "1" : "0"}>
+
                 <div className="topics-overview">
                   <h3 style={{ fontSize: "1rem" }} className="overview">
                     {window.innerWidth <= 500 ? (
@@ -105,6 +105,7 @@ const PreviewPage = (props) => {
                       <span>Topics Overview</span>
                     )}
                   </h3>
+
                   <Accordion.Toggle
                     as={Button}
                     variant="link"
@@ -112,14 +113,15 @@ const PreviewPage = (props) => {
                       $(".arrow-down.overview").toggleClass("down");
                     }}
                     className="float-right speciality-dropdown overview arrow-down"
-                    eventKey="0"
-                  >
+                    eventKey="0">
+
                     <img
                       src="https://www.svgrepo.com/show/60060/down-arrow.svg"
                       className="article-dwn fa-angle-down"
                       style={{ width: "20px" }}
                       alt={"show articles realted to" + descriptionString}
                     />
+                    
                   </Accordion.Toggle>
                 </div>
                 <br />

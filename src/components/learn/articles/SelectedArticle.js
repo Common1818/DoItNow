@@ -3,6 +3,7 @@ import React, { useState, useContext } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { Row, Col, Tooltip, OverlayTrigger } from "react-bootstrap";
 import { Redirect } from "react-router-dom";
+import { Helmet } from "react-helmet"
 
 import { ArticlesContext } from "../../../contexts/articleContext";
 import { TopicsContext } from "../../../contexts/topicContext";
@@ -19,7 +20,7 @@ const SelectedArticle = (props) => {
   const [locked, setLocked] = useState(false);
 
   const { articles } = useContext(ArticlesContext);
-  const { dispatch, authState, authData } = useContext(AuthContext);
+  const { authState, authData } = useContext(AuthContext);
   const { topics } = useContext(TopicsContext);
 
   const Articles = articles && articles.articles;
@@ -58,6 +59,14 @@ const SelectedArticle = (props) => {
               article.TopicId === topicId
             ) {
               return (
+                <div>
+                  <Helmet>
+                    
+                    <title>{article.ArticleName}</title>
+                    <meta name="description" content={article.keywords} />
+                    <meta name="robots" content="index follow"/>
+                  
+                  </Helmet>
                 <Row key={article.id} className="full-view-article p-2">
                   <div className="share-icons">
                     <OverlayTrigger
@@ -77,13 +86,14 @@ const SelectedArticle = (props) => {
                       <div id="link" className="link-icon">
                         <CopyToClipboard
                           text={value}
-                          onCopy={() => setCopied(true)}
-                        >
+                          onCopy={() => setCopied(true)}>
+
                           <img
                             style={{ width: "25px" }}
                             src="https://www.svgrepo.com/show/47491/link.svg"
                             alt={"copy link of " + article.ArticleName}
                           />
+
                         </CopyToClipboard>
                       </div>
                     </OverlayTrigger>
@@ -94,8 +104,8 @@ const SelectedArticle = (props) => {
                       placement="right"
                       overlay={
                         <Tooltip id={"tooltip-right"}>Share via mail</Tooltip>
-                      }
-                    >
+                      }>
+
                       <div className="mail-icon">
                         <a
                           className="mail-icon"
@@ -105,8 +115,8 @@ const SelectedArticle = (props) => {
                             article.ArticleName
                           }",Check it out : ${url}`}
                           target="_top"
-                          rel="nofollow"
-                        >
+                          rel="nofollow">
+
                           <img
                             style={{ width: "25px" }}
                             src="https://www.svgrepo.com/show/303161/gmail-icon-logo.svg"
@@ -122,15 +132,15 @@ const SelectedArticle = (props) => {
                         <Tooltip id={"tooltip-right"}>
                           Share on WhatsApp
                         </Tooltip>
-                      }
-                    >
+                      }>
+
                       <div>
                         <a
                           className="whatsapp-icon"
                           rel="noopener noreferrer"
                           href={`https://api.whatsapp.com/send?text=Hey look i just found out this Amazing article on "${article.ArticleName}",Check it out : ${url}`}
-                          target="_blank"
-                        >
+                          target="_blank">
+
                           <img
                             style={{ width: "30px" }}
                             src="https://www.svgrepo.com/show/303150/whatsapp-symbol-logo.svg"
@@ -194,6 +204,7 @@ const SelectedArticle = (props) => {
                     <br /> */}
                   </Col>
                 </Row>
+                </div>
               );
             }
             return null;

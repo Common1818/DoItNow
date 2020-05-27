@@ -1,11 +1,13 @@
 import React, { useContext, useEffect } from "react";
 import { Row, Col } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import $ from "jquery";
+
 import { AuthContext } from "../../../contexts/authContext";
+
 import DeleteButton from "../../layout/Button/DeleteButton";
 import SomeButton from "../../layout/Button/button";
 
+import $ from "jquery";
 import "./css/card2.css";
 
 const Card = (props) => {
@@ -41,24 +43,25 @@ const Card = (props) => {
                           <Col>
                             <NavLink
                               to={"/updatespeciality/" + item.id}
-                              rel="nofollow"
-                            >
+                              rel="nofollow">
+
                               <img
                                 src="https://www.svgrepo.com/show/241804/edit.svg"
                                 style={{ width: "20px" }}
                                 alt={"edit" + item.Name}
                               />
+
                             </NavLink>
                             <DeleteButton
                               collectionName="Specialities"
                               DocId={item.id}
-                              size="small"
-                            />
+                              size="small"/>
+                              
                           </Col>
                         </Row>
                       ) : null}
                       {uid ? (
-                        <a href={"/learn/" + item.Name}>
+                        <a href={"/learn/" + item.Name} rel="follow">
                           <SomeButton buttonText={"Start Now"} />
                         </a>
                       ) : (

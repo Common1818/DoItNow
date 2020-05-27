@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from "react";
 import TopSection from "./topSection";
 import BottomSection from "./bottomSection";
 import Preloader from "../Preloader/preloader";
-import $ from "jquery";
 
 import { HomeContext } from "../../contexts/homeContext";
 import { motion } from "framer-motion";
@@ -22,10 +21,11 @@ const Home = () => {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+      exit={{ opacity: 0 }}>
+
       {/* Key words in the description should be coordinated with the stuff written in home page */}
       <Helmet>
+        <title>Do It Now</title>
         <meta
           name="description"
           content="DoItNow is a free platform to learn webdevelopment for freelancing"

@@ -18,17 +18,17 @@ const ContactUs = () => {
 
             <div class="row social-media-row-1">
               <div class="icon col-xs-4 col-sm-4 col-md-4">
-                <a href="https://www.facebook.com/tashfeen.choudhury">
+                <a href="https://www.facebook.com/tashfeen.choudhury" rel="nofollow">
                   <i class="fa fa-envelope"></i>
                 </a>
               </div>
               <div class="icon col-xs-4 col-sm-4 col-md-4">
-                <a href="https://twitter.com/tashmchy">
+                <a href="https://twitter.com/tashmchy" rel="nofollow">
                   <i class="fa fa-twitter"></i>
                 </a>
               </div>
               <div class="icon col-xs-4 col-sm-4 col-md-4">
-                <a href="https://twitter.com/tashmchy">
+                <a href="https://twitter.com/tashmchy" rel="nofollow">
                   <i class="fa fa-instagram"></i>
                 </a>
               </div>
@@ -36,17 +36,17 @@ const ContactUs = () => {
 
             <div class="row">
               <div class="icon col-xs-4 col-sm-4 col-md-4">
-                <a href="https://www.linkedin.com/profile/view?id=AAIAABms3KcBtc_riyoK4ki6aXd96vrrJ9KzI9k&trk=nav_responsive_tab_profile">
+                <a href="https://www.linkedin.com/profile/view?id=AAIAABms3KcBtc_riyoK4ki6aXd96vrrJ9KzI9k&trk=nav_responsive_tab_profile" rel="nofollow">>
                   <i class="fa fa-facebook"></i>
                 </a>
               </div>
               <div class="icon col-xs-4 col-sm-4 col-md-4">
-                <a href="https://github.com/tashfeenMustafa">
+                <a href="https://github.com/tashfeenMustafa" rel="nofollow">>
                   <i class="fa fa-github"></i>
                 </a>
               </div>
               <div class="icon col-xs-4 col-sm-4 col-md-4">
-                <a href="https://github.com/tashfeenMustafa">
+                <a href="https://github.com/tashfeenMustafa" rel="nofollow">>
                   <i class="fa fa-google-plus"></i>
                 </a>
               </div>

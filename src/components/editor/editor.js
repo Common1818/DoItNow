@@ -3,8 +3,8 @@ import hljs from "highlight.js";
 import ReactQuill, { Quill } from "react-quill";
 
 import $ from "jquery";
-import "react-quill/dist/quill.snow.css";
 import "./editor.css";
+import "react-quill/dist/quill.snow.css";
 import "highlight.js/styles/gradient-dark.css";
 
 hljs.configure({
@@ -55,8 +55,8 @@ const CustomToolbar = () => (
     <select
       className="ql-header"
       defaultValue={""}
-      onChange={(e) => e.persist()}
-    >
+      onChange={(e) => e.persist()}>
+      
       <option value="1"></option>
       <option value="2"></option>
       <option value="3"></option>

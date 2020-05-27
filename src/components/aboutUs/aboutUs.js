@@ -1,11 +1,14 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-import $ from "jquery";
+
 import ProfileCard from "./profileCard";
+
 import "./css/lightMode/profileCard.css";
 import "./css/lightMode/aboutUs.css";
 import "./css/darkMode/aboutUsDark.css";
 import "./css/darkMode/profileCardDark.css";
+import $ from "jquery";
+
 
 const AboutUs = () => {
   window.onscroll = function () {

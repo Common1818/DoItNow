@@ -44,7 +44,8 @@ const PreviewArticle = ({ TopicNames, SelectedArticle }) => {
             "/" +
             SelectedArticle.id
           }
-        >
+          rel="follow">
+          
           <h2 className="link">Read More.....</h2>
         </Link>
       </div>
